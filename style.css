@@ -1,0 +1,509 @@
+html,
+body {
+  margin: auto;
+  box-sizing: border-box;
+  padding-top: 2rem;
+}
+
+#home {
+  width: 80%;
+  margin: 0 auto;
+}
+#home > img {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:black;
+  padding: 8px 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  color: white;
+}
+.navbar__logo > span {
+  color: white
+}
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+}
+.navbar__menu li {
+  padding: 8px 12px;
+}
+.navbar__menu li:hover {
+  background-color: #d49466;
+  border-radius: 7px;
+}
+.navbar__icons span {
+  padding: 8px 12px;
+  color: white;
+}
+.navbar__toggleBtn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+  display: none;
+}
+
+
+@media (max-width: 500px) {
+
+  .icon{
+    height: 90px;
+    animation: motion 1s /* 속도 */
+               linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+               infinite alternate; /* 무한 반복 */
+  }
+  @keyframes motion {
+    from{
+      transform: translatey(0px);
+    }
+    to{
+      transform: translatey(-100px);
+    }
+  }
+
+  .game__wrapper {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 100px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    min-height: 100px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffff;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    transition: bottom 250ms ease-in,
+                box-shadow 250ms ease-in;
+  }
+
+  .box_btn{
+    background-size: 200px 150px;
+    z-index: 2;
+    background-image: url(box.PNG); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: center center;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  
+    width: 200px;
+    height: 150px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+  }
+
+  .lot{
+    margin-top: 20px; 
+    text-align: center;
+     font-size: 10px;
+  }
+  .lot_button{
+    margin-top: 20px; 
+    text-align: left;
+     font-size: 10px;
+     width: 100%;
+  }
+ *{
+  margin: 0;
+  font-size: 20px;
+ }
+ .myButton {
+	background-color:red;
+	border-radius:0px;
+	border:1px solid #2b2d2b;
+	display:inline-block;
+	cursor:pointer;
+	color: wheat;;
+	font-family:Arial;
+	font-size:5px;
+	padding:0px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #393b38;
+  width: 100%;
+}
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__icons {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .navbar__toggleBtn {
+    display: block;
+  }
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: block;
+  }
+  .container {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+.intro {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100;
+  height: 80vh;
+  background-color: white;
+}
+
+.intro__title {
+  font-size: 60px;
+  line-height: 1.166666666666667;
+  color: black;
+  text-align: center;
+}
+
+.intro__title:after {
+  content: '|';
+  display: inline-block;
+  font-size: 70px;
+  animation: moveCursor 500ms infinite;
+}
+
+@keyframes moveCursor {
+  from {
+      opacity: 1;
+  }
+  
+  to {
+      opacity: 0;
+  }
+}
+
+
+.intro__button {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translate(-50%, 8%);
+  width: 37px;
+  height: 37px;
+  opacity: 0;
+  background-image: url('a.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transition: opacity 500ms ease-in;
+}
+
+.intro__button:hover {
+  cursor: pointer;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  width: 100%;
+  height: auto;
+  letter-spacing: -0.04em;
+  background-color: #ffff;
+}
+
+
+.game__wrapper:hover {
+  bottom: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.game__wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.game__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.game__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.game__image:after {
+    display: block;
+    content: '';
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: background-image 250ms ease-in;
+}
+
+
+#rock-paper-scissors .game__image:after {
+  background-image: url('./../img/index/card-matching.png');
+}
+
+#find-different-color .game__image:after {
+  background-image: url('lot.jpg');
+}
+
+#card-matching .game__image:after {
+  background-image: url('./../img/index/card-matching.png');
+}
+
+#memory-test .game__image:after {
+  background-image: url('./../img/index/memory-test.png');
+}
+
+#bulls-and-cows .game__image:after {
+  background-image: url('./../img/index/bulls-and-cows.png');
+}
+
+
+.game__title {
+  font-size: 19px;
+  margin: 10px;
+}
+div {
+    display: block;
+}
+.game__desc {
+  font-size: 17px;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .intro__title {
+      font-size: 90px;
+      line-height: 1.111;
+  }
+
+  .intro__title:after {
+      font-size: 105px;
+  }
+
+  .intro__button {
+      width: 47px;
+      height: 47px;
+  }
+
+  #game {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 150px 50px;
+      max-width: 780px;
+  }
+
+  .game__wrapper {
+      max-width: 300px;
+      min-height: 351px;
+      margin-bottom: 150px;
+  }
+
+  .game__title {
+      font-size: 20px;
+  }
+
+  .game__desc {
+      font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+  .icon{
+    height: 200px;
+    font-size: 5em;
+    animation: motion 1s /* 속도 */
+               linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+               infinite alternate; /* 무한 반복 */
+  }
+  @keyframes motion {
+    from{
+      transform: translatey(0px);
+    }
+    to{
+      transform: translatey(-100px);
+    }
+  }
+
+  .game__wrapper {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 100px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    min-height: 320px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffff;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    transition: bottom 250ms ease-in,
+                box-shadow 250ms ease-in;
+  }
+
+.icon{
+  height: 400px;
+  font-size: 5em;
+  animation: motion 1s /* 속도 */
+             linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+             infinite alternate; /* 무한 반복 */
+}
+@keyframes motion {
+  from{
+    transform: translatey(0px);
+  }
+  to{
+    transform: translatey(-100px);
+  }
+}
+
+
+  .box_btn{
+    background-size: 500px 400px;
+    z-index: 2;
+    background-image: url(box.PNG); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: center center;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  
+    width: 500px;
+    height: 400px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+  }
+
+  .intro__title {
+      font-size: 110px;
+      line-height: 1.043478260869565;
+  }
+
+  .intro__title:after {
+      font-size: 130px;
+  }
+
+  .intro__button {
+      width: 57px;
+      height: 57px;
+  }
+
+  #game {
+      padding: 200px 50px;
+      max-width: 1000px;
+  }
+
+  .game__wrapper {
+      width: 400px;
+      max-width: 500px;
+      margin-bottom: 200px;
+  }
+
+  .game__title {
+      font-size: 23px;
+  }
+
+  .game__desc {
+      text-align: center;
+      font-size: 21px;
+  }
+  .lot{
+    margin-top: 100px; 
+    text-align: center;
+     font-size: 80px;
+  }
+  .lot_button{
+    margin-top: 200px; 
+    text-align: center;
+     font-size: 80px;
+  }
+  
+  
+  
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  
+  
+  .myButton {
+    background-color:white;
+    border-radius:28px;
+    border:1px solid #2b2d2b;
+    display:inline-block;
+    cursor:pointer;
+    color: black;;
+    font-family:Arial;
+    font-size:30px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #393b38;
+    width: 30%;
+  }
+  .myButton:hover {
+    background-color:rgba(245, 245, 245, 0.105);
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+}
+
+
+

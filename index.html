@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"  defer></script>
+</head>
+ <body >
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <span class="material-symbols-outlined">
+                sports_esports
+                </span>
+            <a href="index.html">Comprehensive game</a>
+        </div>
+        <ul class="navbar__menu">
+            <li><a href="lot_button.html">Lot</a></li>
+            <li><a href="manual.html">manual</a></li>
+        </ul>
+        <div class="navbar__icons">
+            <span style="color:black">&#8242;</span>
+            <span style="color:black">&#8242;</span>
+        </div>
+        <a href="#" class="navbar__toggleBtn">
+              &#9776;
+        </a>
+    </nav>
+<header class="intro">
+    <h1 class="intro__title" lang="en" aria-label="게임 월드에 오신 걸 환영합니다."></h1>
+    <div class="intro__button" aria-hidden="true"></div>
+</header>
+<main id="game" aria-label="게임 목록">
+    
+    <article class="game__wrapper" id="find-different-color" aria-hidden="true">
+        <a class="game__overlay" href="lot_button.html"></a>
+        <figure class="game__image"></figure>
+        <h1 class="game__title" lang="en">
+            제비뽑기
+        </h1>
+        <p class="game__desc" lang="en">
+            뽑기를 해보세요<br/>
+        </p>
+    </article>
+    <article class="game__wrapper" id="rock-paper-scissors">
+        <a class="game__overlay" href="Rock.html" aria-label="가위바위보 게임: 컴퓨터와 가위바위보 대결을 해보세요."></a>
+        <figure class="game__image"></figure>
+        <h1 class="game__title">
+        </h1>
+        <p class="game__desc">
+            
+        </p>
+    </article>
+
+    
+
+    <article class="game__wrapper" id="card-matching" aria-hidden="true">
+        <a class="game__overlay" href="liar.html"></a>
+        <figure class="game__image"></figure>
+        <h1 class="game__title" lang="en">
+        </h1>
+        <p class="game__desc" lang="en">
+            <br/>
+        </p>
+    </article>
+    <article class="game__wrapper" id="memory-test" aria-hidden="true">
+        <a class="game__overlay" href="./game-mt.html"></a>
+        <figure class="game__image"></figure>
+        <h1 class="game__title" lang="en">
+        </h1>
+        <p class="game__desc" lang="en">
+        </p>
+    </article>
+
+    <article class="game__wrapper" id="bulls-and-cows" aria-hidden="true" style="display: none;">
+        <a class="game__overlay" href="./game-bac.html"></a>
+        <figure class="game__image"></figure>
+        <h1 class="game__title" lang="en">
+        </h1>
+        <p class="game__desc" lang="en">
+        </p>
+    </article>
+    
+</main>
+</body>
+</html>

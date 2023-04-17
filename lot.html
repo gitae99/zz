@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="main.js"  defer></script>
+  
+</head>
+<body style="background-color: white; color: black;">
+
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <span class="material-symbols-outlined">
+                sports_esports
+                </span>
+            <a href="index.html">Comprehensive game</a>
+        </div>
+        <ul class="navbar__menu">
+            <li><a href="lot_button.html">Lot</a></li>
+            <li><a href="manual.html">manual</a></li>
+        </ul>
+        <div class="navbar__icons">
+            <span style="color:black">&#8242;</span>
+            <span style="color:black">&#8242;</span>
+        </div>
+        <a href="#" class="navbar__toggleBtn">
+              &#9776;
+        </a>
+    </nav>
+<div class="lot">
+    <div>
+         <div>
+        <img class="icon" src="hand.jpg"/>
+    </div>  
+        <p id="list"></p> 
+        <button id = "btn" class="box_btn game__wrapper">
+        </button>
+    </div>
+    <p id= "para"></p>
+</div>
+<script>
+       var oo = prompt("인원선택(최대 5명)")
+       const names = [];
+
+       
+       if(oo == "2"){
+       var one = prompt("첫 번째 후보의 이름을 입력해주세요");
+       var two = prompt("두 번째 후보의 이름을 입력해주세요");
+       names.push(one);
+       names.push(two);
+       }
+       
+       
+       else if(oo == "3"){
+       var one = prompt("첫 번째 후보의 이름을 입력해주세요");
+       var two = prompt("두 번째 후보의 이름을 입력해주세요");
+       var three = prompt("세 번째 후보의 이름을 입력해주세요");
+       names.push(one);
+       names.push(two);
+       names.push(three);
+       }
+
+       else if(oo == "4"){
+       var one = prompt("첫 번째 후보의 이름을 입력해주세요");
+       var two = prompt("두 번째 후보의 이름을 입력해주세요");
+       var three = prompt("세 번째 후보의 이름을 입력해주세요");
+       var four = prompt("네 번째 후보의 이름을 입력해주세요");
+       names.push(one);
+       names.push(two);
+       names.push(three);
+       names.push(four);
+       }
+
+       else if(oo == "5"){
+       var one = prompt("첫 번째 후보의 이름을 입력해주세요");
+       var two = prompt("두 번째 후보의 이름을 입력해주세요");
+       var three = prompt("세 번째 후보의 이름을 입력해주세요");
+       var four = prompt("네 번째 후보의 이름을 입력해주세요");
+       var five = prompt("다섯 번째 후보의 이름을 입력해주세요");
+       names.push(one);
+       names.push(two);
+       names.push(three);
+       names.push(four);
+       names.push(five);
+       }
+
+       else{
+           alert("1~5명까지 입력해주세요")
+       }
+
+   const para = document.getElementById('para');
+   const list = document.querySelector("#list");
+  
+  //랜덤 숫자 출력 함수
+   function random(min,max){
+       const num = Math.floor(Math.random()*(max - min))+min;
+       return num;
+   }
+   
+   //names list에서 랜덤으로 이름 선택하는 함수
+   function chooseName(array){
+       const choice = array[random(0,array.length)];
+       return choice;
+   }
+  
+   // 버튼 클릭시 결과 출력
+   const btn = document.querySelector("#btn");
+   btn.addEventListener('click',resultChoice); 
+   function resultChoice(){         
+       para.textContent = '당첨자는 ' + chooseName(names) + '입니다.';
+   }
+</script>
+</body>
+</html>

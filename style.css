@@ -127,20 +127,7 @@ a {
   margin: 0;
   font-size: 20px;
  }
- .myButton {
-	background-color:red;
-	border-radius:0px;
-	border:1px solid #2b2d2b;
-	display:inline-block;
-	cursor:pointer;
-	color: wheat;;
-	font-family:Arial;
-	font-size:5px;
-	padding:0px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #393b38;
-  width: 100%;
-}
+ 
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -461,16 +448,7 @@ div {
       text-align: center;
       font-size: 21px;
   }
-  .lot{
-    margin-top: 100px; 
-    text-align: center;
-     font-size: 80px;
-  }
-  .lot_button{
-    margin-top: 200px; 
-    text-align: center;
-     font-size: 80px;
-  }
+  
   
   
   
@@ -480,29 +458,39 @@ div {
     margin: 0;
   }
   
+}
+
+.lot{
+  margin-top: 100px; 
+  text-align: center;
+   font-size: 80px;
+}
+.lot_button{
+  margin-top: 200px; 
+  text-align: center;
+   font-size: 80px;
+}
   
-  
-  .myButton {
-    background-color:white;
-    border-radius:28px;
-    border:1px solid #2b2d2b;
-    display:inline-block;
-    cursor:pointer;
-    color: black;;
-    font-family:Arial;
-    font-size:30px;
-    padding:16px 31px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #393b38;
-    width: 30%;
-  }
-  .myButton:hover {
-    background-color:rgba(245, 245, 245, 0.105);
-  }
-  .myButton:active {
-    position:relative;
-    top:1px;
-  }
+.myButton {
+  background-color:white;
+  border-radius:28px;
+  border:1px solid #2b2d2b;
+  display:inline-block;
+  cursor:pointer;
+  color: black;;
+  font-family:Arial;
+  font-size:30px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #393b38;
+  width: 30%;
+}
+.myButton:hover {
+  background-color:rgba(245, 245, 245, 0.105);
+}
+.myButton:active {
+  position:relative;
+  top:1px;
 }
 
 

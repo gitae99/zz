@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="main.js"  defer></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+        * {
+        font-family: Pretendard;
+        }
+
+        body {
+        background: #f7f8fc;
+        }
+
+        canvas {
+        transition: 2s;
+        }
+
+        button {
+        background: #febf00;
+        margin-top: 1rem;
+        padding: .8rem 1.8rem;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: .2s;
+        cursor: pointer;
+        }
+
+        button:active {
+        background: #444;
+        color: #f9f9f9;
+        }
+        
+        div {
+        width: 380px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    
+        }
+
+        div::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 50px;
+        border-radius: 5px;
+        background: #000;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 22;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <span class="material-symbols-outlined">
+                sports_esports
+                </span>
+            <a href="index.html">Comprehensive game</a>
+        </div>
+        <ul class="navbar__menu">
+            <li><a href="lot_button.html">Lot</a></li>
+            <li><a href="roulette.html">roulette</a></li>
+            <li><a href="manual.html">manual</a></li>
+        </ul>
+        <div class="navbar__icons">
+            <span style="color:black">&#8242;</span>
+            <span style="color:black">&#8242;</span>
+        </div>
+        <a href="#" class="navbar__toggleBtn">
+              &#9776;
+        </a>
+    </nav>
+    <div style=" margin: 0 auto; margin-top: 100px;">
+        <canvas width="380" height='380'></canvas>  
+        <button onclick="rotate()">룰렛 돌리기</button>
+    </div>
+</body>
+<script>
+        const $c = document.querySelector("canvas");
+        const ctx = $c.getContext(`2d`);
+        var oo = prompt("인원선택(최대 5명)")
+       const names = [];
+
+       
+       if(oo == "2"){
+       var one = prompt("첫 번째 후보의 이름을 입력해주세요");
+       var two = prompt("두 번째 후보의 이름을 입력해주세요");
+       names.push(one);
+       names.push(two);
+       }
+       
+       
+       else if(oo == "3"){
+       var one = prompt("첫 번째 후보의 이름을 입력해주세요");
+       var two = prompt("두 번째 후보의 이름을 입력해주세요");
+       var three = prompt("세 번째 후보의 이름을 입력해주세요");
+       names.push(one);
+       names.push(two);
+       names.push(three);
+       }
+
+       else if(oo == "4"){
+       var one = prompt("첫 번째 후보의 이름을 입력해주세요");
+       var two = prompt("두 번째 후보의 이름을 입력해주세요");
+       var three = prompt("세 번째 후보의 이름을 입력해주세요");
+       var four = prompt("네 번째 후보의 이름을 입력해주세요");
+       names.push(one);
+       names.push(two);
+       names.push(three);
+       names.push(four);
+       }
+
+       else if(oo == "5"){
+       var one = prompt("첫 번째 후보의 이름을 입력해주세요");
+       var two = prompt("두 번째 후보의 이름을 입력해주세요");
+       var three = prompt("세 번째 후보의 이름을 입력해주세요");
+       var four = prompt("네 번째 후보의 이름을 입력해주세요");
+       var five = prompt("다섯 번째 후보의 이름을 입력해주세요");
+       names.push(one);
+       names.push(two);
+       names.push(three);
+       names.push(four);
+       names.push(five);
+       }
+
+       else{
+           alert("1~5명까지 입력해주세요")
+       }
+
+        const product = names;
+
+        const colors = [ "#efe61f ", "#60b236", "#209b6c", "#169ed8","#dc0936", "#e6471d", "#f7a416", "#3f297e", "#87207b", "#be107f", "#e7167b"];
+
+        const newMake = () => {
+            const [cw, ch] = [$c.width / 2, $c.height / 2];
+            const arc = Math.PI / (product.length / 2);
+        
+            for (let i = 0; i < product.length; i++) {
+            ctx.beginPath();
+            ctx.fillStyle = colors[i % (colors.length -1)];
+            ctx.moveTo(cw, ch);
+            ctx.arc(cw, ch, cw, arc * (i - 1), arc * i);
+            ctx.fill();
+            ctx.closePath();
+            }
+
+            ctx.fillStyle = "#fff";
+            ctx.font = "18px Pretendard";
+            ctx.textAlign = "center";
+
+            for (let i = 0; i < product.length; i++) {
+            const angle = (arc * i) + (arc / 2);
+
+            ctx.save()  ;
+
+            ctx.translate(
+                cw + Math.cos(angle) * (cw - 50),
+                ch + Math.sin(angle) * (ch - 50),
+            );
+
+            ctx.rotate(angle + Math.PI / 2);
+
+            product[i].split(" ").forEach((text, j) => {
+                ctx.fillText(text, 0, 30 * j);
+            });
+
+            ctx.restore();
+            }
+        }
+
+        const rotate = () => {
+        $c.style.transform = `initial`;
+        $c.style.transition = `initial`;
+        
+        setTimeout(() => {
+            
+            const ran = Math.floor(Math.random() * product.length);
+
+            const arc = 360 / product.length;
+            const rotate = (ran * arc) + 3600 + (arc * 1.82) - (arc/2);
+            
+            $c.style.transform = `rotate(-${rotate}deg)`;
+            $c.style.transition = `2s`;
+            
+            setTimeout(() => alert(`당첨자는 ${product[ran]} 입니다 !`), 2000);
+        }, 1);
+        };
+
+        newMake();
+    </script>
+</html>

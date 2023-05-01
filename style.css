@@ -62,7 +62,7 @@ a {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
 
   .icon{
     height: 90px;
@@ -270,7 +270,7 @@ a {
 
 
 #rock-paper-scissors .game__image:after {
-  background-image: url('./../img/index/card-matching.png');
+  background-image: url('roulette.png');
 }
 
 #find-different-color .game__image:after {
@@ -306,45 +306,6 @@ div {
   opacity: 1;
 }
 
-/* Tablet */
-@media screen and (min-width: 768px) {
-  .intro__title {
-      font-size: 90px;
-      line-height: 1.111;
-  }
-
-  .intro__title:after {
-      font-size: 105px;
-  }
-
-  .intro__button {
-      width: 47px;
-      height: 47px;
-  }
-
-  #game {
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 0 auto;
-      padding: 150px 50px;
-      max-width: 780px;
-  }
-
-  .game__wrapper {
-      max-width: 300px;
-      min-height: 351px;
-      margin-bottom: 150px;
-  }
-
-  .game__title {
-      font-size: 20px;
-  }
-
-  .game__desc {
-      font-size: 18px;
-  }
-}
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
@@ -416,38 +377,41 @@ div {
   }
 
   .intro__title {
-      font-size: 110px;
-      line-height: 1.043478260869565;
-  }
+    font-size: 90px;
+    line-height: 1.111;
+}
 
-  .intro__title:after {
-      font-size: 130px;
-  }
+.intro__title:after {
+    font-size: 105px;
+}
 
-  .intro__button {
-      width: 57px;
-      height: 57px;
-  }
+.intro__button {
+    width: 47px;
+    height: 47px;
+}
 
-  #game {
-      padding: 200px 50px;
-      max-width: 1000px;
-  }
+#game {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 150px 50px;
+    max-width: 780px;
+}
 
-  .game__wrapper {
-      width: 400px;
-      max-width: 500px;
-      margin-bottom: 200px;
-  }
+.game__wrapper {
+    max-width: 300px;
+    min-height: 351px;
+    margin-bottom: 150px;
+}
 
-  .game__title {
-      font-size: 23px;
-  }
+.game__title {
+    font-size: 20px;
+}
 
-  .game__desc {
-      text-align: center;
-      font-size: 21px;
-  }
+.game__desc {
+    font-size: 18px;
+}
   
   
   

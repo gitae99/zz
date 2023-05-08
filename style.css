@@ -2,7 +2,7 @@ html,
 body {
   margin: auto;
   box-sizing: border-box;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 #home {
@@ -278,7 +278,7 @@ a {
 }
 
 #card-matching .game__image:after {
-  background-image: url('./../img/index/card-matching.png');
+  background-image: url('ball.png');
 }
 
 #memory-test .game__image:after {
@@ -456,6 +456,15 @@ div {
   position:relative;
   top:1px;
 }
+
+
+
+
+
+
+
+
+
 
 
 

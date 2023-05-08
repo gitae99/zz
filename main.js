@@ -1,9 +1,7 @@
 const toggleBtn = document.querySelector(".navbar__toggleBtn");
 const menu = document.querySelector(".navbar__menu");
 const icons = document.querySelector(".navbar__icons");
-
-/* 메뉴를 클릭하면 메뉴바가 바로 없어지는 효과*/
-menu.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () => {
   menu.classList.toggle("active");
   icons.classList.toggle("active");
 });
@@ -49,11 +47,14 @@ introButton.addEventListener('click', () => {
     game.scrollIntoView({behavior: "smooth"});
 });
 
-toggleBtn.addEventListener("click", () => {
+
+
+
+/* 메뉴를 클릭하면 메뉴바가 바로 없어지는 효과*/
+menu.addEventListener("click", () => {
   menu.classList.toggle("active");
   icons.classList.toggle("active");
 });
-
 
 
 

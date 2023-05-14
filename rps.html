@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game World : 가위바위보!</title>
+    <meta name="description" content="Vanilla JS를 이용한 Mini Game Project - 가위바위보">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game-rps.css">
+    <script src="main.js"  defer></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <span class="material-symbols-outlined">
+                sports_esports
+                </span>
+            <a href="index.html">Comprehensive game</a>
+        </div>
+        <ul class="navbar__menu">
+            <li><a href="lot_button.html">Lot</a></li>
+            <li><a href="roulette.html">roulette</a></li>
+            <li><a href="baseball.html">baseball</a></li>
+            <li><a href="rps.html">RPS</a></li>
+            <li><a href="manual.html">manual</a></li>
+        </ul>
+        <div class="navbar__icons">
+            <span style="color:black">&#8242;</span>
+            <span style="color:black">&#8242;</span>
+        </div>
+        <a href="#" class="navbar__toggleBtn">
+              &#9776;
+        </a>
+    </nav>
+    <div id="container" class="no-drag">
+        <div class="board">
+            <header class="menu">
+                <nav class="menu__nav">
+                    <div class="menu__nav-life">
+                        <strong id="player-life" aria=""></strong>
+                    </div>
+                    <div class="menu__nav-stop">
+                        <div class="menu__nav-stop--button" id="stop-button">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                    <div class="menu__nav-home">
+                        <a href="./index.html#rock-paper-scissors" class="menu__nav-home--button" id="home-button">
+                            <span class="sr-only"></span>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="game">
+                <div class="game__board">
+                    <div class="game__score">
+                        <p class="game__score-item pc">
+                            PC : <strong id="score-pc"></strong>
+                        </p>
+                        <span>
+                            VS
+                        </span>
+                        <p class="game__score-item player">
+                            Player : <strong id="score-player"></strong>
+                        </p>
+                    </div>
+
+                    <div class="game__pc-selection">
+                            <img src="./img/game-rps/scissors.png" alt="컴퓨터 선택: 가위" class="game__pc-selection--image" id="pc-image" />
+                    </div>
+
+                    <div class="game__button-wrapper">
+                        <button type="button" class="white-button" id="scissors-button">
+                            가위
+                        </button>
+                        <button type="button" class="white-button" id="rock-button">
+                            바위
+                        </button>
+                        <button type="button" class="white-button" id="paper-button">
+                            보
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal modal-layer">
+            <div class="modal__content">
+                <div class="modal__content-title">
+                </div>
+        
+                <p class="modal__content-guide">
+                    <span id="time-remain"></span>초 뒤 자동으로 닫힙니다.
+                </p>
+        
+                <button class="white-button modal__content-close-button" type="button">
+                    닫기
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game-rps.js"></script>
+</body>
+</html>

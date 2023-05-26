@@ -453,7 +453,7 @@ div {
     bottom: 0;
     margin-bottom: 100px;
     padding: 20px;
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     height: 100%;
     min-height: 320px;
@@ -466,7 +466,7 @@ div {
   }
 
 .icon{
-  height: 400px;
+  height: 280px;
   font-size: 5em;
   animation: motion 1s /* 속도 */
              linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
@@ -522,7 +522,7 @@ div {
 }
 
 .game__wrapper {
-    max-width: 300px;
+    max-width: 500px;
     min-height: 351px;
     margin-bottom: 150px;
 }
